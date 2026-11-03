@@ -1,6 +1,9 @@
 package de.lubowiecki;
 
-import java.util.Date;
+import java.util.Date; // nur die Klasse Date wird importiert
+import java.io.*; // Alle Klassn aus dem Package io werden importiert
+
+import static java.lang.Math.E;
 
 public class Struktur {
 
@@ -25,6 +28,11 @@ public class Struktur {
 
         add(10, 22);
 
+        System.out.println(Math.PI);
+        System.out.println(Math.pow(5, 2));
+        //System.out.println(Math.E);
+        System.out.println(E); // Möglich weil E statisch importiert wurde
+
     }
 
     /**
@@ -37,3 +45,7 @@ public class Struktur {
         return a + b;
     }
 }
+
+//class Thing {
+//
+//}
