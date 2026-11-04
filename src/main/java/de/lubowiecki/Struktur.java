@@ -13,10 +13,14 @@ public class Struktur {
         // Instanz/Objekt = Ein konkreter Vertreter einer Klasse
         Person p1 = new Person();
         Person p2 = new Person();
-        p1.vorname = "Peter";
-        p1.nachname = "Parker";
-        p2.vorname = "Bruce";
-        p2.nachname = "Banner";
+        //p1.vorname = "Peter";
+        p1.setVorname("Peter");
+        //p1.nachname = "Parker";
+        p1.setNachname("Parker");
+        //p2.vorname = "Bruce";
+        p2.setVorname("Bruce");
+        //p2.nachname = "Banner";
+        p2.setNachname("Banner");
 
         Date heute = new Date(); // End-of-Line
         System.out.println(heute);
