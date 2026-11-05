@@ -1,4 +1,4 @@
-package de.lubowiecki.aufgaben.loesungen;
+package de.lubowiecki.aufgaben.loesungen.a7;
 
 import java.util.Random;
 
