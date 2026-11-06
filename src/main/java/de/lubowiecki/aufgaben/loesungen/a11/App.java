@@ -30,7 +30,7 @@ public class App {
             System.out.println("Du hast " + gefunden + " Pilze gefunden");
             System.out.println();
 
-            zeigeSpielfeld();
+            zeigeSpielfeld(SPIELFELD);
 
             System.out.print("Noch einmal? ");
             if(SCANNER.next().toLowerCase().equals("ja")){
@@ -80,8 +80,8 @@ public class App {
     /**
      * Gibt das Spielfeld auf der Konsole aus
      */
-    private static void zeigeSpielfeld() {
-        for(int[] reihe : SPIELFELD) {
+    private static void zeigeSpielfeld(int[][] spielfeld) {
+        for(int[] reihe : spielfeld) {
             for(int zelle : reihe) {
                 if(zelle == 1) {
                     System.out.print("\uD83C\uDF44 ");
