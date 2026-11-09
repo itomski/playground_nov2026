@@ -1,5 +1,6 @@
 package de.lubowiecki;
 
+// Die Elternklasse alle Klassen ist Object
 public class Person {
 
     // Komplexe Datentypen (d.h. Klassen-Typen) bekommen als Standard null
@@ -8,22 +9,41 @@ public class Person {
 
     private String vorname = "Unbekannt";
     private String nachname = "Unbekannt";
+    private int alter;
 
+    // 1
     public Person() {
+        // super(); // wird automatisch aufgerufen
+        anzahl++;
+        System.out.println("1");
     }
 
     // Person(String, String)
     public Person(String vorname, String nachname) {
+        this(); // Ruft den parameterlosen Konstruktor auf
         this.vorname = vorname;
         this.nachname = nachname;
-        anzahl++;
+        System.out.println("2");
     }
 
     // Person(String)
     public Person(String nachname) {
-        this.vorname = "Unbekannt";
-        this.nachname = nachname;
-        anzahl++;
+        this("Unbekannt", nachname);
+        System.out.println("3");
+    }
+
+    public Person(String vorname, String nachname, int alter) {
+        this(vorname, nachname); // Aufruf eines anderen Konstruktors muss IMMER als erste Anweisung erfolgen
+        this.alter = alter;
+        System.out.println("4");
+    }
+
+    public int getAlter() {
+        return alter;
+    }
+
+    public void setAlter(int alter) {
+        this.alter = alter;
     }
 
     public String getVorname() {
@@ -52,6 +72,7 @@ public class Person {
         return "Person{" +
                 "vorname='" + vorname + '\'' +
                 ", nachname='" + nachname + '\'' +
+                ", alter=" + alter +
                 '}';
     }
 
