@@ -29,6 +29,12 @@ public class Listen {
 
         System.out.println();
 
+        zahlen.set(1, 100); // Überschreibt ein Element an gewünschter Position
+        System.out.println(zahlen.size());
+        System.out.println(zahlen);
+
+        System.out.println();
+
         for(int i = 0; i < zahlen.size(); i++) {
             System.out.println(zahlen.get(i)); // Fragt ein Element an gewünschter Position ab
         }
