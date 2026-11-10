@@ -41,5 +41,77 @@ public class Api1 {
         sb.append("...");
         System.out.println(sb); // Automatischer Aufruf von toString
         String output = sb.toString();
+
+        System.out.println();
+
+        // Parameterloser Konstruktor baut einen SB mit der capacity von 16
+        StringBuilder sb2 = new StringBuilder(); // Leerer Stringbuilder
+        System.out.println(sb2.length()); // Anzahl von Zeichen im SB
+        System.out.println(sb2.capacity()); // Größe des internen Arrays
+
+        System.out.println();
+        sb2.append("1234567890123456");
+        sb2.append("a");
+        System.out.println(sb2.length());
+        System.out.println(sb2.capacity());
+        // Vergößern = alte Größe * 2 + 2
+
+        System.out.println();
+        sb2.append("1234567890");
+        sb2.append("1234567890");
+        System.out.println(sb2.length());
+        System.out.println(sb2.capacity());
+
+        System.out.println();
+        sb2.trimToSize(); // Zuschnitt des Arrys (capacity) auf die benötigte Größe
+        System.out.println(sb2.length());
+        System.out.println(sb2.capacity());
+
+        // startindex inkl.
+        // endindex exkl.
+        sb2.delete(5, 10); // Entfernt Zeichen an gewünschter Position
+        System.out.println(sb2.length());
+
+        sb2.insert(5, "abc"); // Fügt Zeichen an gewüpnschter Position hinzu
+
+        // Veränedrt nicht den StringBuilder
+        String sub = sb2.substring(15, 20); // Liefert Zeichen aus dem StringBuilder als String
+        System.out.println(sub);
+
+        System.out.println();
+
+        // Konstruktor mit einem String baut einen StringBuilder mit der capacity: Anzahl Zeichen + 16
+        StringBuilder sb3 = new StringBuilder("0123456789");
+        System.out.println(sb3.length()); // 10
+        System.out.println(sb3.capacity()); // 26
+
+        System.out.println();
+        sb3.setLength(5); // Schneidet den Inhalt ab
+        System.out.println(sb3);
+        System.out.println(sb3.length()); // 5
+        System.out.println(sb3.capacity()); // 26
+
+        System.out.println();
+        sb3.setLength(50); // Fügt leere Unicode-Zeichen hinzu
+        System.out.println(sb3);
+        System.out.println(sb3.length()); // 50
+        System.out.println(sb3.capacity()); // 54
+
+        System.out.println();
+
+        // Konstruktor mit einem int baut einen StringBuilder mit der capacity = Zahl
+        StringBuilder sb4 = new StringBuilder(100);
+        System.out.println(sb4.length()); // 0
+        System.out.println(sb4.capacity()); // 100
+
+        System.out.println();
+        sb4.ensureCapacity(50); // Stellt sicher, dass die capacity ausreicht
+        System.out.println(sb4.length()); // 0
+        System.out.println(sb4.capacity()); // 100
+
+        System.out.println();
+        sb4.ensureCapacity(150); // Stellt sicher, dass die capacity ausreicht
+        System.out.println(sb4.length()); // 0
+        System.out.println(sb4.capacity()); // 202
     }
 }
