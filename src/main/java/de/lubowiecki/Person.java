@@ -1,7 +1,9 @@
 package de.lubowiecki;
 
+import java.util.Objects;
+
 // Die Elternklasse alle Klassen ist Object
-public class Person {
+public class Person implements Comparable<Person> {
 
     // Komplexe Datentypen (d.h. Klassen-Typen) bekommen als Standard null
 
@@ -79,5 +81,30 @@ public class Person {
     @Override
     protected void finalize() { // Destructor
         System.out.println("Ich wurde vom GC abgeholt...");
+    }
+
+
+    @Override
+    public int compareTo(Person other) {
+        // Programmierer entscheidet in dieser Methode, auf Basis welcher Eigenschaften der Vergleich erfolgen soll
+        // Da diese Methode nur 1x eingebaut werden kann, beschreibt sie die Natürliche-Ordnung
+        // - = kleiner
+        // + = größer
+        // 0 = gleich
+        return alter - other.alter;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Person person = (Person) o;
+        return alter == person.alter && Objects.equals(vorname, person.vorname) && Objects.equals(nachname, person.nachname);
+    }
+
+    // hashCode und equals sollten auf den gleichen Eigenschaften basieren
+    @Override
+    public int hashCode() {
+        // Objects eine Hilfsklasse mit statischen Methoden für Objekte
+        return Objects.hash(vorname, nachname, alter);
     }
 }

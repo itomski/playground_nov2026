@@ -25,5 +25,17 @@ public class ListenSortieren {
         Baue eine Liste von 3 Person-Objekten und sortiere sie
         */
 
+        List<Character> zeichen = new ArrayList<>(List.of('C', 'B', 'G', 'X', 'A'));
+        Collections.sort(zeichen);
+        System.out.println(zeichen);
+
+        List<Person> personen = new ArrayList<>();
+        personen.add(new Person("Steve", "Rogers", 85));
+        personen.add(new Person("Peter", "Parker", 25));
+        personen.add(new Person("Bruce", "Banner", 42));
+        Collections.sort(personen);
+        System.out.println(personen);
+
+
     }
 }
