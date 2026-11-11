@@ -19,6 +19,9 @@ public class Listen4 {
         zeichen = new ArrayList<>(zeichen); // Wechsel von einer LinkedList auf eine ArrayList
         System.out.println(zeichen);
 
+
+
+
         // var verwendet den genauen Typ der Klasse als Variablentyp
         // Generischer Typ MUSS angegeben werden, sonst ist es Object
         // var ist nicht hilfreich, da wo Referenztyp und Objekttyp nicht gleich sein sollen
