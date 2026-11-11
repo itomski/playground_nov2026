@@ -16,5 +16,5 @@ public class Aufgabe21 {
 
     Freie Felder können z.B. durch X angezeigt werden und die Position des Roboters durch ein @.
     Nach jeder Eingabe wird der Roboter bewegt und das Spielfeld angezeigt.
-     */
+    */
 }
