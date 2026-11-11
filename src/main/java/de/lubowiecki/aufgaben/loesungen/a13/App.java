@@ -65,7 +65,7 @@ public class App {
     private void produkteAusgaben() {
         System.out.println("\nProduktliste");
         for(Produkt produkt : REPO.alleAbfragen()) {
-            if(produkt != null)
+//            if(produkt != null)
                 System.out.printf(ZEILEN_VORLAGE,
                         produkt.getName(),
                         produkt.getBeschreibung(),
