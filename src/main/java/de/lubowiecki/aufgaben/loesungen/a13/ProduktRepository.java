@@ -16,7 +16,6 @@ public class ProduktRepository {
 //        produkte[naechsterFreierIndex] = produkt;
 //        naechsterFreierIndex++;
         produkte.add(produkt);
-
     }
 
     // TODO: Weitere Methoden zum Ändern und Löschen der Produkte
