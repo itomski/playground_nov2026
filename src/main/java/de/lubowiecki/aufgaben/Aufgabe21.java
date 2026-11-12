@@ -1,4 +1,4 @@
-package de.lubowiecki;
+package de.lubowiecki.aufgaben;
 
 public class Aufgabe21 {
 
