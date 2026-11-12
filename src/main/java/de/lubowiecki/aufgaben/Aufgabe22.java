@@ -5,6 +5,7 @@ public class Aufgabe22 {
     /*
     Schreibe eine Klasse Mensch
     Sie verfügt über zwei Eigenschaften (vorname, nachname)
+    Baue einen passenden Kunstruktor.
     Baue eine Methoden begruessung() ein, die einfach "Hallo, mein Name ist ..." ausgibt
 
     Erbe von der Klasse und erzeuge die Klasse Student und Rentner.
