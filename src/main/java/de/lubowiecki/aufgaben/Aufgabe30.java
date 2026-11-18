@@ -1,5 +1,7 @@
 package de.lubowiecki.aufgaben;
 
+import java.util.Random;
+
 public class Aufgabe30 {
 
     /*
@@ -12,6 +14,13 @@ public class Aufgabe30 {
         System.out.println(Dice.W6.get());
         System.out.println(Dice.W20.get());
 
+        System.out.println();
+
+        NextDiceCup cup = new NextDiceCup(Dice.W100);
+        System.out.println(cup.roll());
+        System.out.println(cup.roll());
+        System.out.println(cup.roll());
+        System.out.println(cup.roll());
     }
 }
 
@@ -27,5 +36,19 @@ enum Dice {
 
     public int get() {
         return pips;
+    }
+}
+
+class NextDiceCup {
+
+    private Dice dice;
+    private final Random RAND = new Random();
+
+    public NextDiceCup(Dice dice) {
+        this.dice = dice;
+    }
+
+    public int roll() {
+        return RAND.nextInt(dice.get()) + 1;
     }
 }
