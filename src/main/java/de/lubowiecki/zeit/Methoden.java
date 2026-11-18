@@ -62,5 +62,22 @@ public class Methoden {
         System.out.println(DATE_FMT.format(ld));
         System.out.println(ld.format(DATE_FMT));
 
+        /*
+        d - Tag des Monats
+        M - Monat
+        D - Tag des Jahres
+        y, u - Jahr
+        H - Stunden
+        m - Minuten
+        s - Sekunden
+        */
+
+        final DateTimeFormatter TIME_FMT = DateTimeFormatter.ofPattern("H:m"); // lässt lediglich die führende 0 weg
+        LocalTime lt = LocalTime.now();
+        System.out.println(lt.format(TIME_FMT));
+
+        final DateTimeFormatter DATETIME_FMT = DateTimeFormatter.ofPattern("dd.MM.yy HH:mm"); // lässt lediglich die führende 0 weg
+        LocalDateTime ldt2 = LocalDateTime.now();
+        System.out.println(ldt2.format(DATETIME_FMT));
     }
 }
