@@ -25,8 +25,8 @@ public class App {
     Später:
     Daten werden in eine Datenbank persistiert
     GUI (JavaFX)
-
     */
 
-
+    public static void main(String[] args) {
+    }
 }
