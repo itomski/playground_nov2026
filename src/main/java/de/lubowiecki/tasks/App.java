@@ -32,6 +32,11 @@ public class App {
     Später:
     Daten werden in eine Datenbank persistiert
     GUI (JavaFX)
+
+    Aufgabe:
+    Implementiere die Möglichkeit eine Liste von Tasks zu verwalten.
+    (Hinzufügen und Abfragen)
+
     */
 
     public static void main(String[] args) {
